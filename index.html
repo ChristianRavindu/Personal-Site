@@ -3,60 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Christian Ravindu | Cybersecurity Student</title>
+  <title>Christian Ravindu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Christian</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()">🌙 / ☀️</button>
+  </div>
 
   <header class="hero">
-    <div class="hero-img">
-      <img src="assets/christian.jpg" alt="Christian Ravindu">
+    <div class="text">
+      <h1>Hi, I'm <span>Christian Ravindu</span></h1>
+      <p>17 y/o | BSc Cybersecurity & Digital Forensics Student | 11 Months Experience</p>
+      <div class="btn-group">
+        <a href="assets/Christian_CV.pdf" download class="btn">📄 Download CV</a>
+        <a href="#contact" class="btn outline">📬 Contact Me</a>
+      </div>
     </div>
-    <div class="hero-text">
-      <h1>Hello, I’m <span>Christian Ravindu</span></h1>
-      <p>Cybersecurity & Digital Forensics Student | 17 y/o | 11 Months Experience</p>
-      <a href="#contact" class="btn">Get in Touch</a>
+    <div class="image">
+      <img src="assets/christian-white-bg.jpg" alt="Christian Ravindu" />
     </div>
   </header>
 
-  <section id="about" class="section fade-in">
-    <h2>About Me</h2>
-    <p>
-      I'm Christian Ravindu — a young and passionate cybersecurity enthusiast from Sri Lanka. I'm pursuing my BSc in Cybersecurity & Digital Forensics, and I've already built tools, analyzed threats, and worked on live projects. My mission? To use tech for national defense and help secure the digital world.
-    </p>
+  <section class="projects">
+    <h2>My Projects</h2>
+    <p>Coming soon: Real-world cybersecurity tools and student research.</p>
   </section>
 
-  <section id="skills" class="section fade-in">
-    <h2>Skills & Tools</h2>
-    <div class="cards">
-      <div class="card">Python & Power BI</div>
-      <div class="card">Snort IDS & Linux</div>
-      <div class="card">Malware Analysis</div>
-      <div class="card">Networking Protocols</div>
-      <div class="card">Web Security</div>
-      <div class="card">Data Analytics</div>
-    </div>
-  </section>
-
-  <section id="contact" class="section fade-in">
-    <h2>Contact</h2>
-    <div class="contact-info">
-      <p>📧 <a href="mailto:christianravindu@gmail.com">christianravindu@gmail.com</a></p>
-      <p>📞 <a href="tel:+94701419806">070 141 9806</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/christian-ravindu-576360341/" target="_blank">LinkedIn Profile</a></p>
-    </div>
+  <section class="contact" id="contact">
+    <h2>Let's Connect</h2>
+    <ul>
+      <li>📧 <a href="mailto:christianravindu@gmail.com">christianravindu@gmail.com</a></li>
+      <li>📞 <a href="tel:+94701419806">070 141 9806</a></li>
+      <li>🔗 <a href="https://www.linkedin.com/in/christian-ravindu-576360341/" target="_blank">LinkedIn Profile</a></li>
+    </ul>
   </section>
 
   <footer>
-    <p>© 2025 Christian Ravindu — Built with ❤️ and code</p>
+    <p>© 2025 Christian Ravindu | Designed with ❤️ and code</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
