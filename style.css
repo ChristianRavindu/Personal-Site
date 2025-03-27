@@ -1,0 +1,3 @@
+echo body { font-family: Arial, sans-serif; text-align: center; background-color: #f8f9fa; margin: 0; padding: 2rem; } > style.css
+echo h1 { color: #333; } >> style.css
+echo p { color: #666; } >> style.css
