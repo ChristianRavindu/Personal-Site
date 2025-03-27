@@ -44,10 +44,19 @@ function reveal() {
     }
   }
 }
+
+
 window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
   document.body.classList.add("loaded");
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 800); // Delay fade for smoothness
 });
 
-
 // Initial reveal call on load
+
+
+
+
 reveal();
