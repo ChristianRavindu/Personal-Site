@@ -44,6 +44,10 @@ function reveal() {
     }
   }
 }
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
 
 // Initial reveal call on load
 reveal();
