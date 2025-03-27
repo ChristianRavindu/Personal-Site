@@ -5,20 +5,22 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #fdfdfd;
+  background: #ffffff;
   color: #333;
   line-height: 1.6;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  background: #111;
-  color: #fff;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 .navbar .logo {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  color: #222;
 }
 .nav-links {
   list-style: none;
@@ -26,27 +28,25 @@ body {
   gap: 1.5rem;
 }
 .nav-links a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
-  transition: color 0.3s;
+  font-weight: 500;
 }
 .nav-links a:hover {
-  color: #ffcc00;
+  color: #007acc;
 }
 
 .hero {
   text-align: center;
-  padding: 5rem 2rem;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
-  color: white;
+  padding: 6rem 2rem;
+  background: #f4f6f8;
 }
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
-  animation: fadeInUp 1s ease-in-out;
 }
 .hero span {
-  color: #ffcc00;
+  color: #007acc;
 }
 .hero p {
   font-size: 1.2rem;
@@ -54,8 +54,8 @@ body {
 }
 .btn {
   display: inline-block;
-  background: #ffcc00;
-  color: #000;
+  background: #007acc;
+  color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   text-decoration: none;
@@ -63,7 +63,7 @@ body {
   transition: background 0.3s ease;
 }
 .btn:hover {
-  background: #ffaa00;
+  background: #005c99;
 }
 
 .section {
@@ -74,7 +74,7 @@ body {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #1e3c72;
+  color: #007acc;
 }
 .cards {
   display: grid;
@@ -84,24 +84,30 @@ body {
 .card {
   background: #f1f1f1;
   padding: 1.5rem;
-  border-radius: 12px;
+  border-radius: 10px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contact-info p {
+  margin: 1rem 0;
+}
+.contact-info a {
+  color: #007acc;
+  text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
-  background: #eee;
+  background: #f8f8f8;
   font-size: 0.9rem;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  color: #555;
 }
