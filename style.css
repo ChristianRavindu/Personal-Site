@@ -4,14 +4,8 @@
   --bg: #ffffff;
   --text: #111;
   --accent: #0077cc;
-  --card: #f1f1f1;
-}
-
-body.dark {
-  --bg: #0d1117;
-  --text: #c9d1d9;
-  --accent: #58a6ff;
-  --card: #161b22;
+  --card: #f9f9f9;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 body {
@@ -19,64 +13,52 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: var(--bg);
   color: var(--text);
-  transition: 0.3s ease;
   scroll-behavior: smooth;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 2rem;
-  background: var(--bg);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
+  padding: 1.2rem;
   font-size: 1.4rem;
   font-weight: bold;
+  background: var(--bg);
+  box-shadow: var(--shadow);
   color: var(--accent);
 }
 
-.theme-toggle button {
-  background: transparent;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.hero {
+.profile {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 4rem 2rem;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
+  gap: 2rem;
 }
 
-.hero-text {
+.profile-text {
   flex: 1;
   min-width: 280px;
 }
 
-.hero-text h1 {
-  font-size: 2.6rem;
-  margin-bottom: 0.5rem;
+.profile-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
 }
 
-.typing {
-  color: var(--accent);
-  border-right: 2px solid;
-  white-space: nowrap;
-  overflow: hidden;
+.profile-text h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 1.2rem;
 }
 
-.hero-text p {
+.profile-text p {
   font-size: 1.1rem;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
@@ -89,16 +71,11 @@ body {
 .btn {
   background: var(--accent);
   color: white;
-  padding: 0.7rem 1.4rem;
+  padding: 0.7rem 1.2rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #005fa3;
 }
 
 .btn.outline {
@@ -107,43 +84,83 @@ body {
   color: var(--accent);
 }
 
-.hero-img img {
-  width: 240px;
+.profile-image img {
+  width: 260px;
+  height: 260px;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  object-fit: cover;
+  box-shadow: var(--shadow);
 }
 
-section {
-  padding: 3rem 2rem;
+.timeline {
   max-width: 900px;
   margin: auto;
+  padding: 3rem 2rem;
 }
 
-h2 {
+.timeline h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--accent);
+}
+
+.timeline-list {
+  list-style: none;
+  padding-left: 0;
+  border-left: 3px solid var(--accent);
+  margin-left: 1rem;
+}
+
+.timeline-list li {
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.timeline-content h3 {
+  margin: 0.3rem 0;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact {
+  max-width: 800px;
+  margin: auto;
+  padding: 3rem 2rem;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+
+.contact h2 {
   font-size: 2rem;
   color: var(--accent);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-.about p,
-.projects p,
-.booking p,
-.contact ul {
+.contact-details {
   font-size: 1.1rem;
-  color: var(--text);
+  line-height: 1.8;
+  padding-top: 1rem;
 }
 
-.contact ul {
-  list-style: none;
-  padding: 0;
-}
-
-.contact a {
+.contact-details a {
   color: var(--accent);
   text-decoration: none;
 }
 
-.contact a:hover {
+.contact-details a:hover {
   text-decoration: underline;
 }
 
@@ -154,57 +171,17 @@ footer {
   color: #777;
 }
 
-/* Scroll reveal effect */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Portfolio Gallery */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.work-item {
-  background: var(--card);
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  width: 260px;
-  transition: transform 0.3s ease;
-}
-
-.work-item:hover {
-  transform: translateY(-5px);
-}
-
-.work-item img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 0.5rem;
-}
-
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column-reverse;
+  .profile {
+    flex-direction: column;
     text-align: center;
-  }
-
-  .hero-img img {
-    margin-top: 2rem;
   }
 
   .btn-group {
     justify-content: center;
+  }
+
+  .profile-image img {
+    margin-top: 2rem;
   }
 }
