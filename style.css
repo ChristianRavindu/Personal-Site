@@ -16,18 +16,63 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Navbar */
 .navbar {
-  display: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--accent);
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+/* Profile */
 .profile {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 2rem;
-  max-width: 1100px;
-  margin: auto;
   gap: 2rem;
 }
 
@@ -95,17 +140,39 @@ body {
   transform: scale(1.05);
 }
 
+/* Why Work With Me */
+.why-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  flex: 1 1 260px;
+  transition: transform 0.3s ease;
+}
+
+.card i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Timeline */
 .timeline {
   max-width: 900px;
   margin: auto;
   padding: 3rem 2rem;
-}
-
-.timeline h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: var(--accent);
 }
 
 .timeline-list {
@@ -144,6 +211,35 @@ body {
   color: #555;
 }
 
+/* Testimonials */
+.testimonials {
+  background: #f6f9fc;
+  border-radius: 12px;
+  padding: 4rem 2rem;
+}
+
+.testimonial-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.testimonial-box blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #444;
+  margin: 0 0 0.5rem;
+}
+
+.testimonial-box .author {
+  text-align: right;
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Contact */
 .contact {
   max-width: 800px;
   margin: auto;
@@ -151,13 +247,6 @@ body {
   background: #f8f8f8;
   border-radius: 10px;
   box-shadow: var(--shadow);
-}
-
-.contact h2 {
-  font-size: 2rem;
-  color: var(--accent);
-  margin-bottom: 1rem;
-  text-align: center;
 }
 
 .contact-details {
@@ -175,6 +264,7 @@ body {
   text-decoration: underline;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem 1rem;
@@ -200,6 +290,7 @@ footer {
   color: #005fa3;
 }
 
+/* Floating Contact Button */
 .float-contact {
   position: fixed;
   bottom: 20px;
@@ -219,21 +310,7 @@ footer {
   transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-  .profile {
-    flex-direction: column;
-    text-align: center;
-  }
-
-
-  .btn-group {
-    justify-content: center;
-  }
-
-  .profile-image img {
-    margin-top: 2rem;
-  }
-}
+/* Loader */
 .loader-screen {
   position: fixed;
   top: 0; left: 0;
@@ -259,37 +336,27 @@ footer {
   100% { transform: scale(1); opacity: 1; }
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.loader-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--bg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  .btn-group {
+    justify-content: center;
+  }
+
+  .profile-image img {
+    margin-top: 2rem;
+  }
+
+  .why-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
 }
-
-.loader-logo {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: var(--accent);
-  animation: pulse 1.2s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0%   { transform: scale(1); opacity: 1; }
-  50%  { transform: scale(1.1); opacity: 0.6; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-body.loaded .loader-screen {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-

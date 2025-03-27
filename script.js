@@ -1,21 +1,25 @@
+// === SCRIPT.JS ===
+
+// Theme Toggle
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
 // Typing Effect
-const text = [
-  "Christian Ravindu",
-  "Cybersecurity Student",
-  "Malware Analyst",
-  "Future Digital Defender"
-];
+const text = ["Christian Ravindu", "Cybersecurity Student", "Malware Analyst", "Future Digital Defender"];
 let count = 0;
 let index = 0;
 let currentText = "";
 let letter = "";
 
 (function type() {
-  if (count === text.length) count = 0;
+  if (count === text.length) {
+    count = 0;
+  }
   currentText = text[count];
   letter = currentText.slice(0, ++index);
-  const typingElement = document.querySelector(".typing");
-  if (typingElement) typingElement.textContent = letter;
+
+  document.querySelector(".typing").textContent = letter;
   if (letter.length === currentText.length) {
     count++;
     index = 0;
@@ -25,7 +29,7 @@ let letter = "";
   }
 })();
 
-// Reveal on scroll
+// Scroll Reveal
 window.addEventListener("scroll", reveal);
 function reveal() {
   const reveals = document.querySelectorAll(".reveal");
@@ -41,8 +45,18 @@ function reveal() {
   }
 }
 
-// Loader logic
+
 window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
   document.body.classList.add("loaded");
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 800); // Delay fade for smoothness
 });
-reveal(); // trigger once on load
+
+// Initial reveal call on load
+
+
+
+
+reveal();
