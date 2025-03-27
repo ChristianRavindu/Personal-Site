@@ -17,15 +17,7 @@ body {
 }
 
 .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1.2rem;
-  font-size: 1.4rem;
-  font-weight: bold;
-  background: var(--bg);
-  box-shadow: var(--shadow);
-  color: var(--accent);
+  display: none;
 }
 
 .profile {
@@ -45,7 +37,7 @@ body {
 }
 
 .profile-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   margin-bottom: 0.3rem;
 }
 
@@ -76,6 +68,12 @@ body {
   border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .btn.outline {
@@ -90,6 +88,11 @@ body {
   border-radius: 20px;
   object-fit: cover;
   box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+  transform: scale(1.05);
 }
 
 .timeline {
@@ -116,6 +119,13 @@ body {
   margin-bottom: 2rem;
   position: relative;
   padding-left: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-list li:hover {
+  background: #f0f8ff;
+  border-radius: 6px;
+  padding: 1rem;
 }
 
 .timeline-date {
@@ -140,6 +150,7 @@ body {
   padding: 3rem 2rem;
   background: #f8f8f8;
   border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
 .contact h2 {
@@ -166,9 +177,46 @@ body {
 
 footer {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
   font-size: 0.9rem;
   color: #777;
+  background: #f1f1f1;
+  margin-top: 4rem;
+}
+
+.social-icons {
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: var(--accent);
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #005fa3;
+}
+
+.float-contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: white;
+  padding: 0.7rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.float-contact:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
