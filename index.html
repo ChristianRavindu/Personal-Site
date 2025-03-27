@@ -2,36 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Christian Ravindu</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="theme-toggle">
-    <button onclick="toggleTheme()">🌙 / ☀️</button>
-  </div>
+  <nav class="navbar">
+    <div class="logo">Christian</div>
+    <div class="theme-toggle">
+      <button onclick="toggleTheme()">🌙 / ☀️</button>
+    </div>
+  </nav>
 
   <header class="hero">
-    <div class="text">
-      <h1>Hi, I'm <span>Christian Ravindu</span></h1>
-      <p>17 y/o | BSc Cybersecurity & Digital Forensics Student | 11 Months Experience</p>
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="typing"></span></h1>
+      <p>17 y/o | BSc Cybersecurity & Digital Forensics | 11 Months Experience</p>
       <div class="btn-group">
         <a href="assets/Christian_CV.pdf" download class="btn">📄 Download CV</a>
         <a href="#contact" class="btn outline">📬 Contact Me</a>
       </div>
     </div>
-    <div class="image">
+    <div class="hero-img">
       <img src="assets/christian-white-bg.jpg" alt="Christian Ravindu" />
     </div>
   </header>
 
-  <section class="projects">
-    <h2>My Projects</h2>
+  <section class="about reveal">
+    <h2>About Me</h2>
+    <p>
+      I'm a cybersecurity student and tech enthusiast. I specialize in digital forensics, malware analysis, and network defense. I'm passionate about learning, building, and securing the future of tech.
+    </p>
+  </section>
+  <section class="portfolio reveal" id="portfolio">
+  <h2>My Work</h2>
+  <div class="gallery">
+    <div class="work-item">
+      <img src="assets/project1.jpg" alt="Tool UI" />
+      <p>Ransomware Simulator Tool</p>
+    </div>
+    <div class="work-item">
+      <img src="assets/project2.jpg" alt="Snort IDS" />
+      <p>Snort IDS Configuration</p>
+    </div>
+  </div>
+  </section>
+  <section class="booking reveal" id="book">
+  <h2>Availability</h2>
+  <p>I’m available for internships, freelance projects, and student mentorship.</p>
+  <a href="mailto:christianravindu@gmail.com" class="btn">📬 Book a Session</a>
+  </section>
+  <section class="portfolio reveal" id="portfolio">
+  <h2>My Work</h2>
+  <div class="gallery">
+    <div class="work-item">
+      <img src="assets/project1.jpg" alt="Tool UI" />
+      <p>Ransomware Simulator Tool</p>
+    </div>
+    <div class="work-item">
+      <img src="assets/project2.jpg" alt="Snort IDS" />
+      <p>Snort IDS Configuration</p>
+    </div>
+  </div>
+  </section>
+  <section class="projects reveal">
+    <h2>Projects</h2>
     <p>Coming soon: Real-world cybersecurity tools and student research.</p>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Let's Connect</h2>
+  <section class="contact reveal" id="contact">
+    <h2>Contact</h2>
     <ul>
       <li>📧 <a href="mailto:christianravindu@gmail.com">christianravindu@gmail.com</a></li>
       <li>📞 <a href="tel:+94701419806">070 141 9806</a></li>
@@ -40,9 +81,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Christian Ravindu | Designed with ❤️ and code</p>
+    <p>© 2025 Christian Ravindu 
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
